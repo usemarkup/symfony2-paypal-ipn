@@ -29,6 +29,14 @@ use Doctrine\ORM\Mapping as ORM;
 class IpnOrders
 {
     /**
+     * Mapped constants for $status
+     */
+    const NEW_ORDER = 1; // All new ipn orders are defaulted to new
+    const QUEUED_ORDER = 2; // Qeued in rabbit mq
+    const COMPLETE_ORDER = 3; // Complete
+    const FAILED_ORDER = 4; // Failed
+
+    /**
      * @var integer $id
      *
      * @ORM\Column(name="id", type="integer", nullable=false)
@@ -653,7 +661,37 @@ class IpnOrders
      */
     private $updatedAt;
 
-    
+    /**
+     * Indicates the processing status.
+     *
+     * @var int
+     */
+    private $status;
+
+    /**
+     * Get the status.
+     *
+     * @return int
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * Set the status.
+     *
+     * Returns $this to facilitate method chaining.
+     *
+     * @param $status
+     * @return $this
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
+
+        return $this;
+    }
     
     /**
      * Set id

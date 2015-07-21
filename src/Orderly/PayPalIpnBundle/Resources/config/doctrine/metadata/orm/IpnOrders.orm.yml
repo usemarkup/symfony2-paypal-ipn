@@ -489,4 +489,12 @@ IpnOrders:
       type: datetime
       nullable: false
       column: updated_at
+    status:
+      type: smallint
+      nullable: false
+      column: status
+      length: 1
+      options:
+        default: 1
+
   lifecycleCallbacks: {  }
