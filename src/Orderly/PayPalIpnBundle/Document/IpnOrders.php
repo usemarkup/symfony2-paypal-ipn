@@ -713,7 +713,35 @@ class IpnOrders
      */
     private $updatedAt;
 
+    /**
+     * @var int $status
+     *
+     * @MongoDB\Field(name="status", type="int")
+     */
+    private $status;
 
+    /**
+     * Get the status
+     *
+     * @return int
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * Set the status and return $this.
+     *
+     * @param int $status
+     * @return $this
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
+
+        return $this;
+    }
 
     /**
      * Set id

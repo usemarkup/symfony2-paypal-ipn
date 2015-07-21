@@ -665,6 +665,8 @@ class IpnOrders
      * Indicates the processing status.
      *
      * @var int
+     *
+     * * @ORM\Column(name="status", type="integer", length=1, nullable=false, options={"default":1})
      */
     private $status;
 
