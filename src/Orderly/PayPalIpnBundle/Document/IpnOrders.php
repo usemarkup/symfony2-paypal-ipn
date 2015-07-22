@@ -721,6 +721,48 @@ class IpnOrders
     private $status;
 
     /**
+     * @var int $attentionRequired
+     *
+     * @MongoDB\Field(name="attention_required", type="int")
+     */
+    private $attentionRequired;
+
+    /**
+     * Get the attention required flag.
+     *
+     * @return int
+     */
+    public function getAttentionRequired()
+    {
+        return $this->attentionRequired;
+    }
+
+    /**
+     * Returns a boolean value which is expressive of whether the entity requires attention.
+     *
+     * @return bool
+     */
+    public function attentionRequired()
+    {
+        return ($this->getAttentionRequired() === 1);
+    }
+
+    /**
+     * Set the attention required flag.
+     *
+     * Returning $this to facilitate method chaining.
+     *
+     * @param int $attentionRequired
+     * @return $this
+     */
+    public function setAttentionRequired($attentionRequired)
+    {
+        $this->attentionRequired = $attentionRequired;
+
+        return $this;
+    }
+
+    /**
      * Get the status
      *
      * @return int
