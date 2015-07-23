@@ -694,7 +694,7 @@ class IpnOrders
      *
      * @ORM\Column(name="attention_required", type="integer", length=1, nullable=false, options={"default":0})
      */
-    private $attention_required;
+    private $attentionRequired;
 
     /**
      * Get the attention required flag.
@@ -703,7 +703,7 @@ class IpnOrders
      */
     public function getAttentionRequired()
     {
-        return $this->attention_required;
+        return $this->attentionRequired;
     }
 
     /**
@@ -721,12 +721,12 @@ class IpnOrders
      *
      * Returning $this to facilitate method chaining.
      *
-     * @param int $attention_required
+     * @param int $attentionRequired
      * @return $this
      */
-    public function setAttentionRequired($attention_required)
+    public function setAttentionRequired($attentionRequired)
     {
-        $this->attention_required = $attention_required;
+        $this->attentionRequired = $attentionRequired;
 
         return $this;
     }

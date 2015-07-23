@@ -728,6 +728,37 @@ class IpnOrders
     private $attentionRequired;
 
     /**
+     * @var string $attentionRequiredMEssage
+     *
+     * @MongoDB\Field(name="attention_required_message", type="string")
+     */
+    private $attentionRequiredMessage;
+
+    /**
+     * Get the attention required message.
+     *
+     * @return string
+     */
+    public function getAttentionRequiredMessage()
+    {
+        return $this->attentionRequiredMessage;
+    }
+
+    /**
+     * Set the AR Message
+     *
+     * Returning $this to facilitate method chaining.
+     *
+     * @param string $attentionRequiredMessage
+     * @return $this
+     */
+    public function setAttentionRequiredMessage($attentionRequiredMessage)
+    {
+        $this->attentionRequiredMessage = $attentionRequiredMessage;
+        return $this;
+    }
+
+    /**
      * Get the attention required flag.
      *
      * @return int

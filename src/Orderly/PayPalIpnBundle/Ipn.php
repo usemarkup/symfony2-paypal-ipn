@@ -2,6 +2,7 @@
 
 namespace Orderly\PayPalIpnBundle;
 
+use Orderly\PayPalIpnBundle\Entity\IpnOrders;
 use Symfony\Component\DependencyInjection as DI;
 use Symfony\Component\BrowserKit\Response;
 use Symfony\Component\BrowserKit\Request;
@@ -214,9 +215,9 @@ class Ipn
         }
 
         // The IPN transaction is a genuine one - now we need to validate its contents.
-        // First we check that the receiver email matches our email address.
-        if ($this->ipnData['receiver_email'] != $this->merchantEmail) {
-            $this->_logTransaction('IPN', 'ERROR', 'Receiver email ' . $this->ipnData['receiver_email'] . ' does not match merchant\'s email "'.$this->merchantEmail.'"', $ipnResponse);
+        // First we check that the receiver email matches one of our email address.
+        if (!in_array($this->ipnData['receiver_email'], $this->merchantEmail)) {
+            $this->_logTransaction('IPN', 'ERROR', 'Receiver email ' . $this->ipnData['receiver_email'] . ' does not match any of the merchant\'s email', $ipnResponse);
             
             return FALSE;
         }
@@ -287,6 +288,9 @@ class Ipn
      */
     public function extractOrder()
     {
+        /**
+         * @var IpnOrders
+         */
         $this->order = new $this->clsIpnOrders;
         // First extract the actual order record itself
         foreach ($this->ipnData as $key=>$value) {
@@ -307,7 +311,7 @@ class Ipn
 
         // Let's store the payment status too
         $this->order->setOrderStatus($this->orderStatus);
-        
+
         //Updating dates
         if(!$this->order->getCreatedAt())
             $this->order->setCreatedAt(new \DateTime());
@@ -492,6 +496,11 @@ class Ipn
     public function saveOrder()
     {
         $om = $this->objectManager;
+
+        // Set information that does not come from pp
+        $this->order
+            ->setStatus(1)
+            ->setAttentionRequired(0);
 
         // First check if the order needs an insert or an update
         if (($ipnOrder = $om->getRepository($this->clsIpnOrders)
