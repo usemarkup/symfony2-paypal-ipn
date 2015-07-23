@@ -496,5 +496,17 @@ IpnOrders:
       length: 1
       options:
         default: 1
+    attentionRequired:
+      type: smallint
+      nullable: false
+      column: attention_required
+      length: 1
+      options:
+        default: 0
+    attentionRequiredMessage:
+      type: string
+      length: 255
+      column: attention_required_message
+      nullable: true
 
   lifecycleCallbacks: {  }
