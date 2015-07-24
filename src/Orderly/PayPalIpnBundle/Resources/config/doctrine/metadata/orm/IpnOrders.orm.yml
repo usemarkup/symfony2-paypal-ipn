@@ -493,7 +493,7 @@ IpnOrders:
       type: smallint
       nullable: false
       column: status
-      length: 1
+      length: 2
       options:
         default: 1
     attentionRequired:
