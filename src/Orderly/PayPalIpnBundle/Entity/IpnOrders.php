@@ -39,6 +39,11 @@ class IpnOrders
     const ORPHANED_ORDER = 5; // Orphaned payment
     const PENDING_ORDER = 6; // Pending
 
+    // Multiplying slight improbabilities
+    const ORPHANED_AND_FAILED_ORDER = 7;
+    const ORPHANED_AND_PENDING_ORDER = 8;
+    const ORPHANED_AND_COMPLETE_ORDER = 9;
+
     /**
      * Mapped constants for $attention_required_message
      */
