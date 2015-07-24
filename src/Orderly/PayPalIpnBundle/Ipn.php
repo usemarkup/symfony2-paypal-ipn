@@ -90,6 +90,8 @@ class Ipn
     const WAITING = 'WAITING';
     const REJECTED = 'REJECTED';
     const REFUNDED = 'REFUNDED';
+    const FAILED = 'FAILED';
+    const PENDING = 'PENDING';
 
     /** The constructor. Loads the helpers and configuration files, sets the configuration constants
      *
@@ -260,7 +262,6 @@ class Ipn
             case "Completed": // Order has been paid for
                 $this->orderStatus = self::PAID;
                 break;
-            case "Pending": // Payment is still waiting to go through
             case "Processed": // Mostly used to indicate that a cheque has been received and is currently going through the verification process
                 $this->orderStatus = self::WAITING;
                 break;
@@ -271,6 +272,12 @@ class Ipn
                 break;
             case "Refunded":
                 $this->orderStatus = self::REFUNDED;
+                break;
+            case "Pending": // Payment is still waiting to go through
+                $this->orderStatus = self::PENDING;
+                break;
+            case "Failed":
+                $this->orderStatus = self::FAILED;
                 break;
             default:
                 $this->_logTransaction('IPN', 'ERROR', 'Payment status of ' . $this->ipnData['payment_status'] . ' is not recognised', $ipnResponse);
