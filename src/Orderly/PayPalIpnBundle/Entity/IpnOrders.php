@@ -35,21 +35,10 @@ class IpnOrders
     const QUEUED_ORDER = 2; // Qeued in rabbit mq
     const COMPLETE_ORDER = 3; // Complete
 
-    const FAILED_ORDER = 4; // Failed
-    const ORPHANED_ORDER = 5; // Orphaned payment
-    const PENDING_ORDER = 6; // Pending
-
-    // Multiplying slight improbabilities
-    const ORPHANED_AND_FAILED_ORDER = 7;
-    const ORPHANED_AND_PENDING_ORDER = 8;
-    const ORPHANED_AND_COMPLETE_ORDER = 9;
-
     /**
      * Mapped constants for $attention_required_message
      */
     const PAYMENT_PENDING_MSG = 'This payment is pending.';
-    const PAYMENT_FAILED_MSG = 'This payment has failed';
-    const PAYMENT_ORPHANED_MSG = 'This payment appears to be orphaned';
 
     /**
      * @var integer $id

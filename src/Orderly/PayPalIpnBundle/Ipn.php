@@ -506,7 +506,7 @@ class Ipn
 
         // Set information that does not come from pp
         $this->order
-            ->setStatus(1)
+            ->setStatus(IpnOrders::NEW_ORDER)
             ->setAttentionRequired(0);
 
         // First check if the order needs an insert or an update
