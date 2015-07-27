@@ -713,7 +713,108 @@ class IpnOrders
      */
     private $updatedAt;
 
+    /**
+     * @var int $status
+     *
+     * @MongoDB\Field(name="status", type="int")
+     */
+    private $status;
 
+    /**
+     * @var int $attentionRequired
+     *
+     * @MongoDB\Field(name="attention_required", type="int")
+     */
+    private $attentionRequired;
+
+    /**
+     * @var string $attentionRequiredMEssage
+     *
+     * @MongoDB\Field(name="attention_required_message", type="string")
+     */
+    private $attentionRequiredMessage;
+
+    /**
+     * Get the attention required message.
+     *
+     * @return string
+     */
+    public function getAttentionRequiredMessage()
+    {
+        return $this->attentionRequiredMessage;
+    }
+
+    /**
+     * Set the AR Message
+     *
+     * Returning $this to facilitate method chaining.
+     *
+     * @param string $attentionRequiredMessage
+     * @return $this
+     */
+    public function setAttentionRequiredMessage($attentionRequiredMessage)
+    {
+        $this->attentionRequiredMessage = $attentionRequiredMessage;
+        return $this;
+    }
+
+    /**
+     * Get the attention required flag.
+     *
+     * @return int
+     */
+    public function getAttentionRequired()
+    {
+        return $this->attentionRequired;
+    }
+
+    /**
+     * Returns a boolean value which is expressive of whether the entity requires attention.
+     *
+     * @return bool
+     */
+    public function attentionRequired()
+    {
+        return ($this->getAttentionRequired() === 1);
+    }
+
+    /**
+     * Set the attention required flag.
+     *
+     * Returning $this to facilitate method chaining.
+     *
+     * @param int $attentionRequired
+     * @return $this
+     */
+    public function setAttentionRequired($attentionRequired)
+    {
+        $this->attentionRequired = $attentionRequired;
+
+        return $this;
+    }
+
+    /**
+     * Get the status
+     *
+     * @return int
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * Set the status and return $this.
+     *
+     * @param int $status
+     * @return $this
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
+
+        return $this;
+    }
 
     /**
      * Set id

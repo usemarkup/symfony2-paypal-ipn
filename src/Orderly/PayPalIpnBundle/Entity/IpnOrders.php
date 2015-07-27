@@ -29,6 +29,18 @@ use Doctrine\ORM\Mapping as ORM;
 class IpnOrders
 {
     /**
+     * Mapped constants for $status
+     */
+    const NEW_ORDER = 1; // All new ipn orders are defaulted to new
+    const QUEUED_ORDER = 2; // Qeued in rabbit mq
+    const COMPLETE_ORDER = 3; // Complete
+
+    /**
+     * Mapped constants for $attention_required_message
+     */
+    const PAYMENT_PENDING_MSG = 'This payment is pending.';
+
+    /**
      * @var integer $id
      *
      * @ORM\Column(name="id", type="integer", nullable=false)
@@ -653,7 +665,115 @@ class IpnOrders
      */
     private $updatedAt;
 
-    
+    /**
+     * Indicates the processing status.
+     *
+     * @var int
+     *
+     * @ORM\Column(name="status", type="integer", length=1, nullable=false, options={"default":1})
+     */
+    private $status;
+
+    /**
+     * @var string $attentionRequiredMessage
+     *
+     * @ORM\Column(name="attention_required_message", type="string", length=255, nullable=false)
+     */
+    private $attentionRequiredMessage;
+
+    /**
+     * Indicates if this requires manual intervention.
+     *
+     * @var int
+     *
+     * @ORM\Column(name="attention_required", type="integer", length=1, nullable=false, options={"default":0})
+     */
+    private $attentionRequired;
+
+    /**
+     * Get the attention required flag.
+     *
+     * @return int
+     */
+    public function getAttentionRequired()
+    {
+        return $this->attentionRequired;
+    }
+
+    /**
+     * Returns a boolean value which is expressive of whether the entity requires attention.
+     *
+     * @return bool
+     */
+    public function attentionRequired()
+    {
+        return ($this->getAttentionRequired() === 1);
+    }
+
+    /**
+     * Set the attention required flag.
+     *
+     * Returning $this to facilitate method chaining.
+     *
+     * @param int $attentionRequired
+     * @return $this
+     */
+    public function setAttentionRequired($attentionRequired)
+    {
+        $this->attentionRequired = $attentionRequired;
+
+        return $this;
+    }
+
+    /**
+     * Get the attention required message.
+     *
+     * @return string
+     */
+    public function getAttentionRequiredMessage()
+    {
+        return $this->attentionRequiredMessage;
+    }
+
+    /**
+     * Set the attention required message.
+     *
+     * Returning $this to facilitate method chaining.
+     *
+     * @param string $attentionRequiredMessage
+     * @return $this
+     */
+    public function setAttentionRequiredMessage($attentionRequiredMessage)
+    {
+        $this->attentionRequiredMessage = $attentionRequiredMessage;
+
+        return $this;
+    }
+
+    /**
+     * Get the status.
+     *
+     * @return int
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * Set the status.
+     *
+     * Returns $this to facilitate method chaining.
+     *
+     * @param $status
+     * @return $this
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
+
+        return $this;
+    }
     
     /**
      * Set id
