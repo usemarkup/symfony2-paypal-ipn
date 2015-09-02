@@ -92,6 +92,7 @@ class Ipn
     const REFUNDED = 'REFUNDED';
     const FAILED = 'FAILED';
     const PENDING = 'PENDING';
+    const DENIED = 'DENIED';
 
     /** The constructor. Loads the helpers and configuration files, sets the configuration constants
      *
@@ -278,6 +279,9 @@ class Ipn
                 break;
             case "Failed":
                 $this->orderStatus = self::FAILED;
+                break;
+            case "Declined" || "Denied":
+                $this->orderStatus = self::DENIED;
                 break;
             default:
                 $this->_logTransaction('IPN', 'ERROR', 'Payment status of ' . $this->ipnData['payment_status'] . ' is not recognised', $ipnResponse);
@@ -506,7 +510,7 @@ class Ipn
 
         // Set information that does not come from pp
         $this->order
-            ->setStatus(IpnOrders::NEW_ORDER)
+            ->setStatus(IpnOrders::STATUS_NEW)
             ->setAttentionRequired(0);
 
         // First check if the order needs an insert or an update

@@ -31,14 +31,26 @@ class IpnOrders
     /**
      * Mapped constants for $status
      */
-    const NEW_ORDER = 1; // All new ipn orders are defaulted to new
-    const QUEUED_ORDER = 2; // Qeued in rabbit mq
-    const COMPLETE_ORDER = 3; // Complete
+    const STATUS_NEW = 1; // All new ipn orders are defaulted to new
+    const STATUS_COMPLETE = 2; // Completed
+    const STATUS_SKIPPED = 3; // Skipped
 
     /**
      * Mapped constants for $attention_required_message
      */
-    const PAYMENT_PENDING_MSG = 'This payment is pending.';
+    const MSG_ORPHANED_PAYMENT = 'This payment is an orphan';
+    const MSG_MISMATCHED_AMOUNTS = 'The paypal amount does not match the transaction amount.';
+
+    /**
+     * Matched paypal payment statuses
+     */
+    const PAYMENT_STATUS_COMPLETE = 'Completed'; // Fine
+    const PAYMENT_STATUS_PENDING = 'Pending'; // Ok, see pending_reason
+    const PAYMENT_STATUS_DENIED = 'Denied'; // Bad, denied due to pending_reason(usually payment review)
+    const PAYMENT_STATUS_DECLINED = 'Declined'; // Used for testing from the IPN Simulator
+
+    const PENDING_REASON_REVIEW = 'paymentreview';
+    const PENDING_REVIEW_AUTH = 'authorization';
 
     /**
      * @var integer $id
