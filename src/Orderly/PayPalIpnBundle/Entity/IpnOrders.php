@@ -53,6 +53,15 @@ class IpnOrders
     const PENDING_REVIEW_AUTH = 'authorization';
 
     /**
+     * @var array An array of fields that we check exist within extended data.
+     */
+    public static $updateFields = [
+        'authId' => 'authorization_id',
+        'payerStatus' => 'PAYERSTATUS',
+        'payerAddress' => 'ADDRESSSTATUS'
+    ];
+
+    /**
      * @var integer $id
      *
      * @ORM\Column(name="id", type="integer", nullable=false)
