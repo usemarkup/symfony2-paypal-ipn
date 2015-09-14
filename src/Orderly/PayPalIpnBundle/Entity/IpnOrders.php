@@ -58,7 +58,7 @@ class IpnOrders
     public static $updateFields = [
         'authId' => 'authorization_id',
         'payerStatus' => 'PAYERSTATUS',
-        'payerAddress' => 'ADDRESSSTATUS'
+        'addressStatus' => 'ADDRESSSTATUS'
     ];
 
     /**
