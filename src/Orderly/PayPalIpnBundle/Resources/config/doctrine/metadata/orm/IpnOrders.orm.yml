@@ -3,7 +3,7 @@ IpnOrders:
   table: ipn_orders
   indexes:
     txn_id_index:
-      columns: [ txnId ]
+      columns: [ txn_id ]
   fields:
     id:
       id: true
