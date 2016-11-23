@@ -1,6 +1,9 @@
 IpnOrders:
   type: entity
   table: ipn_orders
+  indexes:
+    txn_id_index:
+      columns: [ txnId ]
   fields:
     id:
       id: true
