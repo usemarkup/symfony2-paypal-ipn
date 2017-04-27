@@ -2,6 +2,7 @@
 
 namespace Orderly\PayPalIpnBundle;
 
+use Orderly\PayPalIpnBundle\Entity\IpnLog;
 use Orderly\PayPalIpnBundle\Entity\IpnOrders;
 use Symfony\Component\DependencyInjection as DI;
 use Symfony\Component\BrowserKit\Response;
@@ -93,6 +94,12 @@ class Ipn
     const FAILED = 'FAILED';
     const PENDING = 'PENDING';
     const DENIED = 'DENIED';
+
+    private $clsIpnLog;
+
+    private $clsIpnOrders;
+
+    private $clsIpnOrderItems;
 
     /** The constructor. Loads the helpers and configuration files, sets the configuration constants
      *

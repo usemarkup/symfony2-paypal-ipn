@@ -26,7 +26,9 @@ class Pdt
     private $logID; // The ID of our IpnLog record
     private $transactionID; // The transaction ID aka txn_id (from PayPal)
 
-    private $objectManager; // Object Manger holding reference to DB-Driver
+    private $objectManager;
+
+    private $clsIpnLog; // Object Manger holding reference to DB-Driver
 
     /** The constructor. Loads the helpers and configuration files, sets the configuration constants
      *
