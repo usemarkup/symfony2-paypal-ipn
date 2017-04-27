@@ -66,35 +66,35 @@ class IpnOrderItems
     private $quantity;
 
     /**
-     * @var decimal $mcGross
+     * @var string $mcGross
      *
      * @ORM\Column(name="mc_gross", type="decimal", scale=2, nullable=true)
      */
     private $mcGross;
 
     /**
-     * @var decimal $mcHandling
+     * @var string $mcHandling
      *
      * @ORM\Column(name="mc_handling", type="decimal", scale=2, nullable=true)
      */
     private $mcHandling;
 
     /**
-     * @var decimal $mcShipping
+     * @var string $mcShipping
      *
      * @ORM\Column(name="mc_shipping", type="decimal", scale=2, nullable=true)
      */
     private $mcShipping;
 
     /**
-     * @var decimal $tax
+     * @var string $tax
      *
      * @ORM\Column(name="tax", type="decimal", scale=2, nullable=true)
      */
     private $tax;
 
     /**
-     * @var decimal $costPerItem
+     * @var string $costPerItem
      *
      * @ORM\Column(name="cost_per_item", type="decimal", scale=2, nullable=true)
      */
@@ -199,14 +199,14 @@ class IpnOrderItems
     private $optionSelection7;
 
     /**
-     * @var datetime $createdAt
+     * @var \DateTime $createdAt
      *
      * @ORM\Column(name="created_at", type="datetime", nullable=false)
      */
     private $createdAt;
 
     /**
-     * @var datetime $updatedAt
+     * @var \DateTime $updatedAt
      *
      * @ORM\Column(name="updated_at", type="datetime", nullable=false)
      */
@@ -317,7 +317,7 @@ class IpnOrderItems
     /**
      * Set mcGross
      *
-     * @param decimal $mcGross
+     * @param string $mcGross
      */
     public function setMcGross($mcGross)
     {
@@ -327,7 +327,7 @@ class IpnOrderItems
     /**
      * Get mcGross
      *
-     * @return decimal 
+     * @return string
      */
     public function getMcGross()
     {
@@ -337,7 +337,7 @@ class IpnOrderItems
     /**
      * Set mcHandling
      *
-     * @param decimal $mcHandling
+     * @param string $mcHandling
      */
     public function setMcHandling($mcHandling)
     {
@@ -347,7 +347,7 @@ class IpnOrderItems
     /**
      * Get mcHandling
      *
-     * @return decimal 
+     * @return string
      */
     public function getMcHandling()
     {
@@ -357,7 +357,7 @@ class IpnOrderItems
     /**
      * Set mcShipping
      *
-     * @param decimal $mcShipping
+     * @param string $mcShipping
      */
     public function setMcShipping($mcShipping)
     {
@@ -367,7 +367,7 @@ class IpnOrderItems
     /**
      * Get mcShipping
      *
-     * @return decimal 
+     * @return string
      */
     public function getMcShipping()
     {
@@ -377,7 +377,7 @@ class IpnOrderItems
     /**
      * Set tax
      *
-     * @param decimal $tax
+     * @param string $tax
      */
     public function setTax($tax)
     {
@@ -387,7 +387,7 @@ class IpnOrderItems
     /**
      * Get tax
      *
-     * @return decimal 
+     * @return string
      */
     public function getTax()
     {
@@ -397,7 +397,7 @@ class IpnOrderItems
     /**
      * Set costPerItem
      *
-     * @param decimal $costPerItem
+     * @param string $costPerItem
      */
     public function setCostPerItem($costPerItem)
     {
@@ -407,7 +407,7 @@ class IpnOrderItems
     /**
      * Get costPerItem
      *
-     * @return decimal 
+     * @return string
      */
     public function getCostPerItem()
     {
@@ -697,7 +697,7 @@ class IpnOrderItems
     /**
      * Set createdAt
      *
-     * @param datetime $createdAt
+     * @param \DateTime $createdAt
      */
     public function setCreatedAt($createdAt)
     {
@@ -707,7 +707,7 @@ class IpnOrderItems
     /**
      * Get createdAt
      *
-     * @return datetime 
+     * @return \DateTime
      */
     public function getCreatedAt()
     {
@@ -717,7 +717,7 @@ class IpnOrderItems
     /**
      * Set updatedAt
      *
-     * @param datetime $updatedAt
+     * @param \DateTime $updatedAt
      */
     public function setUpdatedAt($updatedAt)
     {
@@ -727,7 +727,7 @@ class IpnOrderItems
     /**
      * Get updatedAt
      *
-     * @return datetime 
+     * @return \DateTime
      */
     public function getUpdatedAt()
     {

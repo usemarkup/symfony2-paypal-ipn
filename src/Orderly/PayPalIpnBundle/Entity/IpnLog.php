@@ -80,21 +80,21 @@ class IpnLog
     private $ipnDataHash;
 
     /**
-     * @var text $detail
+     * @var string $detail
      *
      * @ORM\Column(name="detail", type="text", nullable=true)
      */
     private $detail;
 
     /**
-     * @var datetime $createdAt
+     * @var \DateTime $createdAt
      *
      * @ORM\Column(name="created_at", type="datetime", nullable=false)
      */
     private $createdAt;
 
     /**
-     * @var datetime $updatedAt
+     * @var \DateTime $updatedAt
      *
      * @ORM\Column(name="updated_at", type="datetime", nullable=false)
      */
@@ -111,11 +111,11 @@ class IpnLog
     {
         $this->id = intval($id);
     }
-    
+
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -135,7 +135,7 @@ class IpnLog
     /**
      * Get listenerName
      *
-     * @return string 
+     * @return string
      */
     public function getListenerName()
     {
@@ -155,7 +155,7 @@ class IpnLog
     /**
      * Get transactionType
      *
-     * @return string 
+     * @return string
      */
     public function getTransactionType()
     {
@@ -175,7 +175,7 @@ class IpnLog
     /**
      * Get transactionId
      *
-     * @return string 
+     * @return string
      */
     public function getTransactionId()
     {
@@ -195,7 +195,7 @@ class IpnLog
     /**
      * Get status
      *
-     * @return string 
+     * @return string
      */
     public function getStatus()
     {
@@ -215,7 +215,7 @@ class IpnLog
     /**
      * Get message
      *
-     * @return string 
+     * @return string
      */
     public function getMessage()
     {
@@ -235,7 +235,7 @@ class IpnLog
     /**
      * Get ipnDataHash
      *
-     * @return string 
+     * @return string
      */
     public function getIpnDataHash()
     {
@@ -245,7 +245,7 @@ class IpnLog
     /**
      * Set detail
      *
-     * @param text $detail
+     * @param string $detail
      */
     public function setDetail($detail)
     {
@@ -255,7 +255,7 @@ class IpnLog
     /**
      * Get detail
      *
-     * @return text 
+     * @return string
      */
     public function getDetail()
     {
@@ -265,7 +265,7 @@ class IpnLog
     /**
      * Set createdAt
      *
-     * @param datetime $createdAt
+     * @param \DateTime $createdAt
      */
     public function setCreatedAt($createdAt)
     {
@@ -275,7 +275,7 @@ class IpnLog
     /**
      * Get createdAt
      *
-     * @return datetime 
+     * @return \DateTime
      */
     public function getCreatedAt()
     {
@@ -285,7 +285,7 @@ class IpnLog
     /**
      * Set updatedAt
      *
-     * @param datetime $updatedAt
+     * @param \DateTime $updatedAt
      */
     public function setUpdatedAt($updatedAt)
     {
@@ -295,7 +295,7 @@ class IpnLog
     /**
      * Get updatedAt
      *
-     * @return datetime 
+     * @return \DateTime
      */
     public function getUpdatedAt()
     {

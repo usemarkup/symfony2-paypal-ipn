@@ -700,14 +700,14 @@ class IpnOrders
     private $transactionSubject;
 
     /**
-     * @var datetime $createdAt
+     * @var \DateTime $createdAt
      *
      * @MongoDB\Field(name="created_at", type="date")
      */
     private $createdAt;
 
     /**
-     * @var datetime $updatedAt
+     * @var \DateTime $updatedAt
      *
      * @MongoDB\Field(name="updated_at", type="date")
      */
@@ -1399,7 +1399,7 @@ class IpnOrders
     /**
      * Set tax
      *
-     * @param decimal $tax
+     * @param string $tax
      */
     public function setTax($tax)
     {
@@ -1409,7 +1409,7 @@ class IpnOrders
     /**
      * Get tax
      *
-     * @return decimal
+     * @return string
      */
     public function getTax()
     {
@@ -1679,7 +1679,7 @@ class IpnOrders
     /**
      * Set shipping
      *
-     * @param decimal $shipping
+     * @param string $shipping
      */
     public function setShipping($shipping)
     {
@@ -1689,7 +1689,7 @@ class IpnOrders
     /**
      * Get shipping
      *
-     * @return decimal
+     * @return string
      */
     public function getShipping()
     {
@@ -1759,7 +1759,7 @@ class IpnOrders
     /**
      * Set exchangeRate
      *
-     * @param decimal $exchangeRate
+     * @param string $exchangeRate
      */
     public function setExchangeRate($exchangeRate)
     {
@@ -1769,7 +1769,7 @@ class IpnOrders
     /**
      * Get exchangeRate
      *
-     * @return decimal
+     * @return string
      */
     public function getExchangeRate()
     {
@@ -1799,7 +1799,7 @@ class IpnOrders
     /**
      * Set mcFee
      *
-     * @param decimal $mcFee
+     * @param string $mcFee
      */
     public function setMcFee($mcFee)
     {
@@ -1809,7 +1809,7 @@ class IpnOrders
     /**
      * Get mcFee
      *
-     * @return decimal
+     * @return string
      */
     public function getMcFee()
     {
@@ -1819,7 +1819,7 @@ class IpnOrders
     /**
      * Set mcGross
      *
-     * @param decimal $mcGross
+     * @param string $mcGross
      */
     public function setMcGross($mcGross)
     {
@@ -1829,7 +1829,7 @@ class IpnOrders
     /**
      * Get mcGross
      *
-     * @return decimal
+     * @return string
      */
     public function getMcGross()
     {
@@ -1839,7 +1839,7 @@ class IpnOrders
     /**
      * Set mcHandling
      *
-     * @param decimal $mcHandling
+     * @param string $mcHandling
      */
     public function setMcHandling($mcHandling)
     {
@@ -1849,7 +1849,7 @@ class IpnOrders
     /**
      * Get mcHandling
      *
-     * @return decimal
+     * @return string
      */
     public function getMcHandling()
     {
@@ -1859,7 +1859,7 @@ class IpnOrders
     /**
      * Set mcShipping
      *
-     * @param decimal $mcShipping
+     * @param string $mcShipping
      */
     public function setMcShipping($mcShipping)
     {
@@ -1869,7 +1869,7 @@ class IpnOrders
     /**
      * Get mcShipping
      *
-     * @return decimal
+     * @return string
      */
     public function getMcShipping()
     {
@@ -1879,7 +1879,7 @@ class IpnOrders
     /**
      * Set paymentFee
      *
-     * @param decimal $paymentFee
+     * @param string $paymentFee
      */
     public function setPaymentFee($paymentFee)
     {
@@ -1889,7 +1889,7 @@ class IpnOrders
     /**
      * Get paymentFee
      *
-     * @return decimal
+     * @return string
      */
     public function getPaymentFee()
     {
@@ -1899,7 +1899,7 @@ class IpnOrders
     /**
      * Set paymentGross
      *
-     * @param decimal $paymentGross
+     * @param string $paymentGross
      */
     public function setPaymentGross($paymentGross)
     {
@@ -1909,7 +1909,7 @@ class IpnOrders
     /**
      * Get paymentGross
      *
-     * @return decimal
+     * @return string
      */
     public function getPaymentGross()
     {
@@ -1919,7 +1919,7 @@ class IpnOrders
     /**
      * Set settleAmount
      *
-     * @param decimal $settleAmount
+     * @param string $settleAmount
      */
     public function setSettleAmount($settleAmount)
     {
@@ -1929,7 +1929,7 @@ class IpnOrders
     /**
      * Get settleAmount
      *
-     * @return decimal
+     * @return string
      */
     public function getSettleAmount()
     {
@@ -2139,7 +2139,7 @@ class IpnOrders
     /**
      * Set amount1
      *
-     * @param decimal $amount1
+     * @param string $amount1
      */
     public function setAmount1($amount1)
     {
@@ -2149,7 +2149,7 @@ class IpnOrders
     /**
      * Get amount1
      *
-     * @return decimal
+     * @return string
      */
     public function getAmount1()
     {
@@ -2159,7 +2159,7 @@ class IpnOrders
     /**
      * Set amount2
      *
-     * @param decimal $amount2
+     * @param string $amount2
      */
     public function setAmount2($amount2)
     {
@@ -2169,7 +2169,7 @@ class IpnOrders
     /**
      * Get amount2
      *
-     * @return decimal
+     * @return string
      */
     public function getAmount2()
     {
@@ -2179,7 +2179,7 @@ class IpnOrders
     /**
      * Set amount3
      *
-     * @param decimal $amount3
+     * @param string $amount3
      */
     public function setAmount3($amount3)
     {
@@ -2189,7 +2189,7 @@ class IpnOrders
     /**
      * Get amount3
      *
-     * @return decimal
+     * @return string
      */
     public function getAmount3()
     {
@@ -2199,7 +2199,7 @@ class IpnOrders
     /**
      * Set mcAmount1
      *
-     * @param decimal $mcAmount1
+     * @param string $mcAmount1
      */
     public function setMcAmount1($mcAmount1)
     {
@@ -2209,7 +2209,7 @@ class IpnOrders
     /**
      * Get mcAmount1
      *
-     * @return decimal
+     * @return string
      */
     public function getMcAmount1()
     {
@@ -2219,7 +2219,7 @@ class IpnOrders
     /**
      * Set mcAmount2
      *
-     * @param decimal $mcAmount2
+     * @param string $mcAmount2
      */
     public function setMcAmount2($mcAmount2)
     {
@@ -2229,7 +2229,7 @@ class IpnOrders
     /**
      * Get mcAmount2
      *
-     * @return decimal
+     * @return string
      */
     public function getMcAmount2()
     {
@@ -2239,7 +2239,7 @@ class IpnOrders
     /**
      * Set mcAmount3
      *
-     * @param decimal $mcAmount3
+     * @param string $mcAmount3
      */
     public function setMcAmount3($mcAmount3)
     {
@@ -2249,7 +2249,7 @@ class IpnOrders
     /**
      * Get mcAmount3
      *
-     * @return decimal
+     * @return string
      */
     public function getMcAmount3()
     {
@@ -2479,7 +2479,7 @@ class IpnOrders
     /**
      * Set discount
      *
-     * @param decimal $discount
+     * @param string $discount
      */
     public function setDiscount($discount)
     {
@@ -2489,7 +2489,7 @@ class IpnOrders
     /**
      * Get discount
      *
-     * @return decimal
+     * @return string
      */
     public function getDiscount()
     {
@@ -2499,7 +2499,7 @@ class IpnOrders
     /**
      * Set shippingDiscount
      *
-     * @param decimal $shippingDiscount
+     * @param string $shippingDiscount
      */
     public function setShippingDiscount($shippingDiscount)
     {
@@ -2509,7 +2509,7 @@ class IpnOrders
     /**
      * Get shippingDiscount
      *
-     * @return decimal
+     * @return string
      */
     public function getShippingDiscount()
     {
@@ -2559,7 +2559,7 @@ class IpnOrders
     /**
      * Set createdAt
      *
-     * @param datetime $createdAt
+     * @param \DateTime $createdAt
      */
     public function setCreatedAt($createdAt)
     {
@@ -2570,7 +2570,7 @@ class IpnOrders
     /**
      * Get createdAt
      *
-     * @return datetime
+     * @return \DateTime
      */
     public function getCreatedAt()
     {
@@ -2595,7 +2595,7 @@ class IpnOrders
     /**
      * Set updatedAt
      *
-     * @param datetime $updatedAt
+     * @param \DateTime $updatedAt
      */
     public function setUpdatedAt($updatedAt)
     {
@@ -2605,7 +2605,7 @@ class IpnOrders
     /**
      * Get updatedAt
      *
-     * @return datetime
+     * @return \DateTime
      */
     public function getUpdatedAt()
     {

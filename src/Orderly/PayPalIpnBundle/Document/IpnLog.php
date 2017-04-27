@@ -86,14 +86,14 @@ class IpnLog
     private $ipnDataHash;
 
     /**
-     * @var text $detail
+     * @var string $detail
      *
      * @MongoDB\Field(name="detail", type="string")
      */
     private $detail;
 
     /**
-     * @var datetime $createdAt
+     * @var \DateTime $createdAt
      *
      * @MongoDB\Field(name="created_at", type="date")
      * @Assert\NotBlank()
@@ -101,7 +101,7 @@ class IpnLog
     private $createdAt;
 
     /**
-     * @var datetime $updatedAt
+     * @var \DateTime $updatedAt
      *
      * @MongoDB\Field(name="updated_at", type="date", nullable=false)
      * @Assert\NotBlank()
@@ -253,7 +253,7 @@ class IpnLog
     /**
      * Set detail
      *
-     * @param text $detail
+     * @param string $detail
      */
     public function setDetail($detail)
     {
@@ -263,7 +263,7 @@ class IpnLog
     /**
      * Get detail
      *
-     * @return text
+     * @return string
      */
     public function getDetail()
     {
@@ -273,7 +273,7 @@ class IpnLog
     /**
      * Set createdAt
      *
-     * @param datetime $createdAt
+     * @param \DateTime $createdAt
      */
     public function setCreatedAt($createdAt)
     {
@@ -283,7 +283,7 @@ class IpnLog
     /**
      * Get createdAt
      *
-     * @return datetime
+     * @return \DateTime
      */
     public function getCreatedAt()
     {
@@ -307,7 +307,7 @@ class IpnLog
     /**
      * Set updatedAt
      *
-     * @param datetime $updatedAt
+     * @param \DateTime $updatedAt
      */
     public function setUpdatedAt($updatedAt)
     {
@@ -317,7 +317,7 @@ class IpnLog
     /**
      * Get updatedAt
      *
-     * @return datetime
+     * @return \DateTime
      */
     public function getUpdatedAt()
     {
