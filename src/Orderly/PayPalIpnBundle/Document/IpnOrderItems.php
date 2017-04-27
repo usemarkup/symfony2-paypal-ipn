@@ -69,35 +69,35 @@ class IpnOrderItems
     private $quantity;
 
     /**
-     * @var decimal $mcGross
+     * @var \DateTime $mcGross
      *
      * @MongoDB\Field(name="mc_gross", type="float")
      */
     private $mcGross;
 
     /**
-     * @var decimal $mcHandling
+     * @var \DateTime $mcHandling
      *
      * @MongoDB\Field(name="mc_handling", type="float")
      */
     private $mcHandling;
 
     /**
-     * @var decimal $mcShipping
+     * @var \DateTime $mcShipping
      *
      * @MongoDB\Field(name="mc_shipping", type="float")
      */
     private $mcShipping;
 
     /**
-     * @var decimal $tax
+     * @var \DateTime $tax
      *
      * @MongoDB\Field(name="tax", type="float")
      */
     private $tax;
 
     /**
-     * @var decimal $costPerItem
+     * @var \DateTime $costPerItem
      *
      * @MongoDB\Field(name="cost_per_item", type="float")
      */
@@ -216,7 +216,7 @@ class IpnOrderItems
     private $optionSelection7;
 
     /**
-     * @var datetime $createdAt
+     * @var \DateTime $createdAt
      *
      * @MongoDB\Field(name="created_at", type="date")
      * @Assert\NotBlank()
@@ -224,7 +224,7 @@ class IpnOrderItems
     private $createdAt;
 
     /**
-     * @var datetime $updatedAt
+     * @var \DateTime $updatedAt
      *
      * @MongoDB\Field(name="updated_at", type="date")
      * @Assert\NotBlank()
@@ -335,7 +335,7 @@ class IpnOrderItems
     /**
      * Set mcGross
      *
-     * @param decimal $mcGross
+     * @param string $mcGross
      */
     public function setMcGross($mcGross)
     {
@@ -345,7 +345,7 @@ class IpnOrderItems
     /**
      * Get mcGross
      *
-     * @return decimal
+     * @return string
      */
     public function getMcGross()
     {
@@ -355,7 +355,7 @@ class IpnOrderItems
     /**
      * Set mcHandling
      *
-     * @param decimal $mcHandling
+     * @param string $mcHandling
      */
     public function setMcHandling($mcHandling)
     {
@@ -365,7 +365,7 @@ class IpnOrderItems
     /**
      * Get mcHandling
      *
-     * @return decimal
+     * @return string
      */
     public function getMcHandling()
     {
@@ -375,7 +375,7 @@ class IpnOrderItems
     /**
      * Set mcShipping
      *
-     * @param decimal $mcShipping
+     * @param string $mcShipping
      */
     public function setMcShipping($mcShipping)
     {
@@ -385,7 +385,7 @@ class IpnOrderItems
     /**
      * Get mcShipping
      *
-     * @return decimal
+     * @return string
      */
     public function getMcShipping()
     {
@@ -395,7 +395,7 @@ class IpnOrderItems
     /**
      * Set tax
      *
-     * @param decimal $tax
+     * @param string $tax
      */
     public function setTax($tax)
     {
@@ -405,7 +405,7 @@ class IpnOrderItems
     /**
      * Get tax
      *
-     * @return decimal
+     * @return string
      */
     public function getTax()
     {
@@ -415,7 +415,7 @@ class IpnOrderItems
     /**
      * Set costPerItem
      *
-     * @param decimal $costPerItem
+     * @param string $costPerItem
      */
     public function setCostPerItem($costPerItem)
     {
@@ -425,7 +425,7 @@ class IpnOrderItems
     /**
      * Get costPerItem
      *
-     * @return decimal
+     * @return string
      */
     public function getCostPerItem()
     {
@@ -715,7 +715,7 @@ class IpnOrderItems
     /**
      * Set createdAt
      *
-     * @param datetime $createdAt
+     * @param \DateTime $createdAt
      */
     public function setCreatedAt($createdAt)
     {
@@ -725,7 +725,7 @@ class IpnOrderItems
     /**
      * Get createdAt
      *
-     * @return datetime
+     * @return \DateTime
      */
     public function getCreatedAt()
     {
@@ -749,7 +749,7 @@ class IpnOrderItems
     /**
      * Set updatedAt
      *
-     * @param datetime $updatedAt
+     * @param \DateTime $updatedAt
      */
     public function setUpdatedAt($updatedAt)
     {
@@ -759,7 +759,7 @@ class IpnOrderItems
     /**
      * Get updatedAt
      *
-     * @return datetime
+     * @return \DateTime
      */
     public function getUpdatedAt()
     {
