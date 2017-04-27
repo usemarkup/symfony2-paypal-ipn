@@ -32,15 +32,15 @@ class Pdt
 
     /** The constructor. Loads the helpers and configuration files, sets the configuration constants
      *
-     * @param DI\ContainerInterface $container 
+     * @param DI\ContainerInterface $container
      */
-    function __construct(DI\ContainerInterface $container, $objectManager, $ipnLog)
+    public function __construct(DI\ContainerInterface $container, $objectManager, $ipnLog)
     {
         $this->_sc =& $container;
 
         $this->objectManager = $objectManager;
 
-        // Settings  
+        // Settings
         $this->pdtURL = $this->_sc->getParameter('orderly.paypalipn.url');
         $this->pdtToken = $this->_sc->getParameter('orderly.paypalipn.pdttoken');
         $this->isLive = $this->_sc->getParameter('orderly.paypalipn.islive');
@@ -53,7 +53,7 @@ class Pdt
 
     /**
      * The key functionality in this library. Gets the data from Paypal with a transaction id obtained from an IPN call.
-     * 
+     *
      * @param string $transactionID Transaction Id returned from an IPN call.
      * @return array
      */
@@ -63,8 +63,8 @@ class Pdt
         
         // Now we need to ask PayPal to tell us if it sent this notification
         $pdtResponse = $this->_postData($this->pdtURL, array('cmd' => '_notify-synch', 'tx' => $transactionID, 'at' => $this->pdtToken));
-        if ($pdtResponse === FALSE) { // Bail out if we have an error.
-            return FALSE;
+        if ($pdtResponse === false) { // Bail out if we have an error.
+            return false;
         }
 
         // Phew! We have a valid PDT transaction, log it.
@@ -74,13 +74,13 @@ class Pdt
 
     /**
      * Sending data to PayPal PDT service
-     * 
+     *
      * @param string $url
      * @param array $postData
-     * 
+     *
      * @return string
      */
-    function _postData($url, $postData)
+    public function _postData($url, $postData)
     {
         if ($this->mockResponse !== null) {
             return $this->mockResponse;
@@ -97,7 +97,7 @@ class Pdt
         \curl_setopt($curl, CURLOPT_POST, 1);
         \curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
         \curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 2);
-        \curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, FALSE);
+        \curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
 
         if (!empty($this->proxyUrl)) {
             \curl_setopt($curl, CURLOPT_PROXYTYPE, CURLPROXY_HTTP);
@@ -112,7 +112,7 @@ class Pdt
         if (\curl_error($curl)) {
             $this->_logTransaction("PDT", "ERROR", "curl error number " . \curl_errno($curl) . ": " . \curl_error($curl) . " connecting to " . $url);
 
-            return FALSE;
+            return false;
         }
 
         \curl_close($curl);
@@ -140,19 +140,19 @@ class Pdt
             $this->_logTransaction('PDT', 'ERROR', 'PayPal did not respond properly to the PDT call', $response);
         }
 
-        return FALSE;
+        return false;
     }
 
     /** The transaction logger. Currently tracks:
      *
      * - Successful and failed calls by the PayPal PDT
-     *  
+     *
      * @param string $listenerName
      * @param string $transactionStatus
      * @param string $transactionMessage
      * @param string $pdtResponse
      */
-    function _logTransaction($listenerName, $transactionStatus, $transactionMessage, $pdtResponse = null)
+    public function _logTransaction($listenerName, $transactionStatus, $transactionMessage, $pdtResponse = null)
     {
         // Store the standard log information
         $om = $this->objectManager;
@@ -168,8 +168,9 @@ class Pdt
         $ipnLog->setStatus($transactionStatus);
         $ipnLog->setMessage($transactionMessage);
         
-        if(!$ipnLog->getCreatedAt())
+        if (!$ipnLog->getCreatedAt()) {
             $ipnLog->setCreatedAt(new \DateTime());
+        }
         $ipnLog->setUpdatedAt(new \DateTime());
 
         if ($transactionStatus == 'FAIL' || !$this->isLive) {

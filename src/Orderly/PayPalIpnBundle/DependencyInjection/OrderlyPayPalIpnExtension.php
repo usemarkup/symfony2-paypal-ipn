@@ -25,10 +25,10 @@ use Symfony\Component\DependencyInjection\Loader;
 
 /**
  *  Setting container parameters
- * 
- * @param array $configs 
+ *
+ * @param array $configs
  * @param ContainerBuilder $container
- * 
+ *
  */
 class OrderlyPayPalIpnExtension extends Extension
 {
@@ -41,8 +41,7 @@ class OrderlyPayPalIpnExtension extends Extension
 
         $container->setParameter('orderly.paypalipn.islive', $config['islive']);
         
-        if($config['islive'])
-        {
+        if ($config['islive']) {
             $container->setParameter('orderly.paypalipn.email', $config['email']);
             $container->setParameter('orderly.paypalipn.url', $config['url']);
             $container->setParameter('orderly.paypalipn.debug', $config['debug']);
@@ -50,9 +49,7 @@ class OrderlyPayPalIpnExtension extends Extension
             $container->setParameter('orderly.paypalipn.pdttoken', $config['pdttoken']);
             $container->setParameter('orderly.paypalipn.pdtresponse', null);
             $container->setParameter('orderly.paypalipn.proxy', $config['proxy']);
-        }
-        else
-        {
+        } else {
             $container->setParameter('orderly.paypalipn.email', $config['sandbox_email']);
             $container->setParameter('orderly.paypalipn.url', $config['sandbox_url']);
             $container->setParameter('orderly.paypalipn.debug', $config['sandbox_debug']);
@@ -63,16 +60,11 @@ class OrderlyPayPalIpnExtension extends Extension
         }
 
         $driver = null;
-        if (isset($config['drivers']))
-        {
-
-            if (isset($config['drivers']['orm']))
-            {
+        if (isset($config['drivers'])) {
+            if (isset($config['drivers']['orm'])) {
                 $this->loadORMDriver($container, $loader, $config['drivers']['orm']);
                 $driver = 'orm';
-            }
-            elseif(isset($config['drivers']['odm']))
-            {
+            } elseif (isset($config['drivers']['odm'])) {
                 $this->loadODMDriver($container, $loader, $config['drivers']['odm']);
                 $driver = 'odm';
             }
@@ -91,10 +83,8 @@ class OrderlyPayPalIpnExtension extends Extension
 
         $container->setAlias('paypal_ipn.driver.object_manager', $config['object_manager']);
 
-        foreach($params as $param)
-        {
-            if (isset($classes[$param]))
-            {
+        foreach ($params as $param) {
+            if (isset($classes[$param])) {
                 $container->setParameter(sprintf('paypal_ipn.class.%s', $param), $classes[$param]);
             }
         }
@@ -111,10 +101,8 @@ class OrderlyPayPalIpnExtension extends Extension
 
         $container->setAlias('paypal_ipn.driver.object_manager', $config['object_manager']);
 
-        foreach($params as $param)
-        {
-            if (isset($classes[$param]))
-            {
+        foreach ($params as $param) {
+            if (isset($classes[$param])) {
                 $container->setParameter(sprintf('paypal_ipn.class.%s', $param), $classes[$param]);
             }
         }

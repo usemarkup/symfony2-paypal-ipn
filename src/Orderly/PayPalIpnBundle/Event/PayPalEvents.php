@@ -2,7 +2,8 @@
 
 namespace Orderly\PayPalIpnBundle\Event;
 
-class PayPalEvents {
+class PayPalEvents
+{
 
     const RECEIVED = 'paypal.ipn.receive';
 }

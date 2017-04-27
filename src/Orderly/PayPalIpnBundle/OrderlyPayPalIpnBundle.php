@@ -21,13 +21,13 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  */
 
 /**
- *  Bundle main class 
+ *  Bundle main class
  */
 class OrderlyPayPalIpnBundle extends Bundle
 {
     public function boot()
-    {      
-        if (!\Doctrine\DBAL\Types\Type::hasType('enumorderstatus')){
+    {
+        if (!\Doctrine\DBAL\Types\Type::hasType('enumorderstatus')) {
             \Doctrine\DBAL\Types\Type::addType('enumorderstatus', 'Orderly\PayPalIpnBundle\Types\EnumOrderStatus');
             $em = $this->container->get('doctrine')->getManager();
             $em->getConnection()->getDatabasePlatform()->registerDoctrineTypeMapping('enumorderstatus', 'string');

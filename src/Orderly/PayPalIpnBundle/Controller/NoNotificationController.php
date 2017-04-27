@@ -2,12 +2,10 @@
 
 namespace Orderly\PayPalIpnBundle\Controller;
 
-use Symfony\Component\HttpFoundation\Response;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
-use Orderly\PayPalIpnBundle\Ipn;
 use Orderly\PayPalIpnBundle\Event as Events;
+use Orderly\PayPalIpnBundle\Ipn;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Response;
 
 /*
  * Copyright 2012 Orderly Ltd 
@@ -30,8 +28,9 @@ use Orderly\PayPalIpnBundle\Event as Events;
  */
 class NoNotificationController extends Controller
 {
-    
+
     public $paypal_ipn;
+
     /**
      * @Route("/ipn-no-notification")
      * @Template()
@@ -42,8 +41,7 @@ class NoNotificationController extends Controller
         $this->paypal_ipn = $this->get('orderly_pay_pal_ipn');
 
         //validate ipn (generating response on PayPal IPN request)
-        if ($this->paypal_ipn->validateIPN())
-        {
+        if ($this->paypal_ipn->validateIPN()) {
             // Succeeded, now let's extract the order
             $this->paypal_ipn->extractOrder();
 
@@ -51,8 +49,7 @@ class NoNotificationController extends Controller
             $this->paypal_ipn->saveOrder();
 
             // Now let's check what the payment status is and act accordingly
-            if ($this->paypal_ipn->getOrderStatus() == Ipn::PAID)
-            {
+            if ($this->paypal_ipn->getOrderStatus() == Ipn::PAID) {
                 /* HEALTH WARNING:
                  *
                  * Please note that this PAID block does nothing. In other words, this controller will not respond to a successful order
@@ -61,23 +58,21 @@ class NoNotificationController extends Controller
                  * If you want to send email notifications on successful receipt of an order, please see the alternative, Twig template-
                  * based example controller: TwigEmailNotification.php
                  */
-    
             }
-            
-        }
-        else // Just redirect to the root URL
+        } else // Just redirect to the root URL
         {
             return $this->redirect('/');
         }
         $this->triggerEvent(Events\PayPalEvents::RECEIVED);
         $response = new Response();
         $response->setStatusCode(200);
-        
+
         return $response;
     }
 
 
-    private function triggerEvent($event_name) {
+    private function triggerEvent($event_name)
+    {
         $dispatcher = $this->container->get('event_dispatcher');
         $dispatcher->dispatch($event_name, new Events\PayPalEvent($this->paypal_ipn));
     }

@@ -809,7 +809,7 @@ class IpnOrders
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -829,7 +829,7 @@ class IpnOrders
     /**
      * Get notifyVersion
      *
-     * @return string 
+     * @return string
      */
     public function getNotifyVersion()
     {
@@ -849,7 +849,7 @@ class IpnOrders
     /**
      * Get verifySign
      *
-     * @return string 
+     * @return string
      */
     public function getVerifySign()
     {
@@ -869,7 +869,7 @@ class IpnOrders
     /**
      * Get testIpn
      *
-     * @return integer 
+     * @return integer
      */
     public function getTestIpn()
     {
@@ -889,7 +889,7 @@ class IpnOrders
     /**
      * Get protectionEligibility
      *
-     * @return string 
+     * @return string
      */
     public function getProtectionEligibility()
     {
@@ -909,7 +909,7 @@ class IpnOrders
     /**
      * Get charset
      *
-     * @return string 
+     * @return string
      */
     public function getCharset()
     {
@@ -929,7 +929,7 @@ class IpnOrders
     /**
      * Get btnId
      *
-     * @return string 
+     * @return string
      */
     public function getBtnId()
     {
@@ -949,7 +949,7 @@ class IpnOrders
     /**
      * Get addressCity
      *
-     * @return string 
+     * @return string
      */
     public function getAddressCity()
     {
@@ -969,7 +969,7 @@ class IpnOrders
     /**
      * Get addressCountry
      *
-     * @return string 
+     * @return string
      */
     public function getAddressCountry()
     {
@@ -989,7 +989,7 @@ class IpnOrders
     /**
      * Get addressCountryCode
      *
-     * @return string 
+     * @return string
      */
     public function getAddressCountryCode()
     {
@@ -1009,7 +1009,7 @@ class IpnOrders
     /**
      * Get addressName
      *
-     * @return string 
+     * @return string
      */
     public function getAddressName()
     {
@@ -1029,7 +1029,7 @@ class IpnOrders
     /**
      * Get addressState
      *
-     * @return string 
+     * @return string
      */
     public function getAddressState()
     {
@@ -1049,7 +1049,7 @@ class IpnOrders
     /**
      * Get addressStatus
      *
-     * @return string 
+     * @return string
      */
     public function getAddressStatus()
     {
@@ -1069,7 +1069,7 @@ class IpnOrders
     /**
      * Get addressStreet
      *
-     * @return string 
+     * @return string
      */
     public function getAddressStreet()
     {
@@ -1089,7 +1089,7 @@ class IpnOrders
     /**
      * Get addressZip
      *
-     * @return string 
+     * @return string
      */
     public function getAddressZip()
     {
@@ -1109,7 +1109,7 @@ class IpnOrders
     /**
      * Get firstName
      *
-     * @return string 
+     * @return string
      */
     public function getFirstName()
     {
@@ -1129,7 +1129,7 @@ class IpnOrders
     /**
      * Get lastName
      *
-     * @return string 
+     * @return string
      */
     public function getLastName()
     {
@@ -1149,7 +1149,7 @@ class IpnOrders
     /**
      * Get payerBusinessName
      *
-     * @return string 
+     * @return string
      */
     public function getPayerBusinessName()
     {
@@ -1169,7 +1169,7 @@ class IpnOrders
     /**
      * Get payerEmail
      *
-     * @return string 
+     * @return string
      */
     public function getPayerEmail()
     {
@@ -1189,7 +1189,7 @@ class IpnOrders
     /**
      * Get payerId
      *
-     * @return string 
+     * @return string
      */
     public function getPayerId()
     {
@@ -1209,7 +1209,7 @@ class IpnOrders
     /**
      * Get payerStatus
      *
-     * @return string 
+     * @return string
      */
     public function getPayerStatus()
     {
@@ -1229,7 +1229,7 @@ class IpnOrders
     /**
      * Get contactPhone
      *
-     * @return string 
+     * @return string
      */
     public function getContactPhone()
     {
@@ -1249,7 +1249,7 @@ class IpnOrders
     /**
      * Get residenceCountry
      *
-     * @return string 
+     * @return string
      */
     public function getResidenceCountry()
     {
@@ -1269,7 +1269,7 @@ class IpnOrders
     /**
      * Get business
      *
-     * @return string 
+     * @return string
      */
     public function getBusiness()
     {
@@ -1289,7 +1289,7 @@ class IpnOrders
     /**
      * Get receiverEmail
      *
-     * @return string 
+     * @return string
      */
     public function getReceiverEmail()
     {
@@ -1309,7 +1309,7 @@ class IpnOrders
     /**
      * Get receiverId
      *
-     * @return string 
+     * @return string
      */
     public function getReceiverId()
     {
@@ -1329,7 +1329,7 @@ class IpnOrders
     /**
      * Get custom
      *
-     * @return string 
+     * @return string
      */
     public function getCustom()
     {
@@ -1349,7 +1349,7 @@ class IpnOrders
     /**
      * Get invoice
      *
-     * @return string 
+     * @return string
      */
     public function getInvoice()
     {
@@ -1369,7 +1369,7 @@ class IpnOrders
     /**
      * Get memo
      *
-     * @return string 
+     * @return string
      */
     public function getMemo()
     {
@@ -1409,7 +1409,7 @@ class IpnOrders
     /**
      * Get authId
      *
-     * @return string 
+     * @return string
      */
     public function getAuthId()
     {
@@ -1429,7 +1429,7 @@ class IpnOrders
     /**
      * Get authExp
      *
-     * @return string 
+     * @return string
      */
     public function getAuthExp()
     {
@@ -1449,7 +1449,7 @@ class IpnOrders
     /**
      * Get authAmount
      *
-     * @return integer 
+     * @return integer
      */
     public function getAuthAmount()
     {
@@ -1469,7 +1469,7 @@ class IpnOrders
     /**
      * Get authStatus
      *
-     * @return string 
+     * @return string
      */
     public function getAuthStatus()
     {
@@ -1489,7 +1489,7 @@ class IpnOrders
     /**
      * Get numCartItems
      *
-     * @return integer 
+     * @return integer
      */
     public function getNumCartItems()
     {
@@ -1509,7 +1509,7 @@ class IpnOrders
     /**
      * Get parentTxnId
      *
-     * @return string 
+     * @return string
      */
     public function getParentTxnId()
     {
@@ -1529,7 +1529,7 @@ class IpnOrders
     /**
      * Get paymentDate
      *
-     * @return string 
+     * @return string
      */
     public function getPaymentDate()
     {
@@ -1549,7 +1549,7 @@ class IpnOrders
     /**
      * Get paymentStatus
      *
-     * @return string 
+     * @return string
      */
     public function getPaymentStatus()
     {
@@ -1569,7 +1569,7 @@ class IpnOrders
     /**
      * Get paymentType
      *
-     * @return string 
+     * @return string
      */
     public function getPaymentType()
     {
@@ -1589,7 +1589,7 @@ class IpnOrders
     /**
      * Get pendingReason
      *
-     * @return string 
+     * @return string
      */
     public function getPendingReason()
     {
@@ -1609,7 +1609,7 @@ class IpnOrders
     /**
      * Get reasonCode
      *
-     * @return string 
+     * @return string
      */
     public function getReasonCode()
     {
@@ -1629,7 +1629,7 @@ class IpnOrders
     /**
      * Get remainingSettle
      *
-     * @return integer 
+     * @return integer
      */
     public function getRemainingSettle()
     {
@@ -1649,7 +1649,7 @@ class IpnOrders
     /**
      * Get shippingMethod
      *
-     * @return string 
+     * @return string
      */
     public function getShippingMethod()
     {
@@ -1689,7 +1689,7 @@ class IpnOrders
     /**
      * Get transactionEntity
      *
-     * @return string 
+     * @return string
      */
     public function getTransactionEntity()
     {
@@ -1709,7 +1709,7 @@ class IpnOrders
     /**
      * Get txnId
      *
-     * @return string 
+     * @return string
      */
     public function getTxnId()
     {
@@ -1729,7 +1729,7 @@ class IpnOrders
     /**
      * Get txnType
      *
-     * @return string 
+     * @return string
      */
     public function getTxnType()
     {
@@ -1769,7 +1769,7 @@ class IpnOrders
     /**
      * Get mcCurrency
      *
-     * @return string 
+     * @return string
      */
     public function getMcCurrency()
     {
@@ -1929,7 +1929,7 @@ class IpnOrders
     /**
      * Get settleCurrency
      *
-     * @return string 
+     * @return string
      */
     public function getSettleCurrency()
     {
@@ -1949,7 +1949,7 @@ class IpnOrders
     /**
      * Get auctionBuyerId
      *
-     * @return string 
+     * @return string
      */
     public function getAuctionBuyerId()
     {
@@ -1969,7 +1969,7 @@ class IpnOrders
     /**
      * Get auctionClosingDate
      *
-     * @return string 
+     * @return string
      */
     public function getAuctionClosingDate()
     {
@@ -1989,7 +1989,7 @@ class IpnOrders
     /**
      * Get auctionMultiItem
      *
-     * @return integer 
+     * @return integer
      */
     public function getAuctionMultiItem()
     {
@@ -2009,7 +2009,7 @@ class IpnOrders
     /**
      * Get forAuction
      *
-     * @return string 
+     * @return string
      */
     public function getForAuction()
     {
@@ -2029,7 +2029,7 @@ class IpnOrders
     /**
      * Get subscrDate
      *
-     * @return string 
+     * @return string
      */
     public function getSubscrDate()
     {
@@ -2049,7 +2049,7 @@ class IpnOrders
     /**
      * Get subscrEffective
      *
-     * @return string 
+     * @return string
      */
     public function getSubscrEffective()
     {
@@ -2069,7 +2069,7 @@ class IpnOrders
     /**
      * Get period1
      *
-     * @return string 
+     * @return string
      */
     public function getPeriod1()
     {
@@ -2089,7 +2089,7 @@ class IpnOrders
     /**
      * Get period2
      *
-     * @return string 
+     * @return string
      */
     public function getPeriod2()
     {
@@ -2109,7 +2109,7 @@ class IpnOrders
     /**
      * Get period3
      *
-     * @return string 
+     * @return string
      */
     public function getPeriod3()
     {
@@ -2249,7 +2249,7 @@ class IpnOrders
     /**
      * Get recurring
      *
-     * @return string 
+     * @return string
      */
     public function getRecurring()
     {
@@ -2269,7 +2269,7 @@ class IpnOrders
     /**
      * Get reattempt
      *
-     * @return string 
+     * @return string
      */
     public function getReattempt()
     {
@@ -2289,7 +2289,7 @@ class IpnOrders
     /**
      * Get retryAt
      *
-     * @return string 
+     * @return string
      */
     public function getRetryAt()
     {
@@ -2309,7 +2309,7 @@ class IpnOrders
     /**
      * Get recurTimes
      *
-     * @return integer 
+     * @return integer
      */
     public function getRecurTimes()
     {
@@ -2329,7 +2329,7 @@ class IpnOrders
     /**
      * Get username
      *
-     * @return string 
+     * @return string
      */
     public function getUsername()
     {
@@ -2349,7 +2349,7 @@ class IpnOrders
     /**
      * Get password
      *
-     * @return string 
+     * @return string
      */
     public function getPassword()
     {
@@ -2369,7 +2369,7 @@ class IpnOrders
     /**
      * Get subscrId
      *
-     * @return string 
+     * @return string
      */
     public function getSubscrId()
     {
@@ -2389,7 +2389,7 @@ class IpnOrders
     /**
      * Get caseId
      *
-     * @return string 
+     * @return string
      */
     public function getCaseId()
     {
@@ -2409,7 +2409,7 @@ class IpnOrders
     /**
      * Get caseType
      *
-     * @return string 
+     * @return string
      */
     public function getCaseType()
     {
@@ -2429,7 +2429,7 @@ class IpnOrders
     /**
      * Get caseCreationDate
      *
-     * @return string 
+     * @return string
      */
     public function getCaseCreationDate()
     {
@@ -2438,7 +2438,7 @@ class IpnOrders
 
     /**
      * Set orderStatus
-     * 
+     *
      * @param string $orderStatus
      */
     public function setOrderStatus($orderStatus)
@@ -2449,7 +2449,7 @@ class IpnOrders
     /**
      * Get orderStatus
      *
-     * @return string 
+     * @return string
      */
     public function getOrderStatus()
     {
@@ -2509,7 +2509,7 @@ class IpnOrders
     /**
      * Get ipnTrackId
      *
-     * @return string 
+     * @return string
      */
     public function getIpnTrackId()
     {
@@ -2529,7 +2529,7 @@ class IpnOrders
     /**
      * Get transactionSubject
      *
-     * @return string 
+     * @return string
      */
     public function getTransactionSubject()
     {

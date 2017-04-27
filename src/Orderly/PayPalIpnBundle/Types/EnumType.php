@@ -21,7 +21,7 @@ use Doctrine\DBAL\Platforms\AbstractPlatform;
  */
 
 /**
- *  Declare new datatype (base class) 
+ *  Declare new datatype (base class)
  */
 abstract class EnumType extends Type
 {
@@ -30,7 +30,9 @@ abstract class EnumType extends Type
 
     public function getSqlDeclaration(array $fieldDeclaration, AbstractPlatform $platform)
     {
-        $values = array_map(function($val) { return "'".$val."'"; }, $this->values);
+        $values = array_map(function ($val) {
+            return "'".$val."'";
+        }, $this->values);
 
         return "ENUM(".implode(", ", $values).") COMMENT '(DC2Type:".$this->name.")'";
     }

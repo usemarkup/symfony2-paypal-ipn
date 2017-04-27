@@ -227,7 +227,7 @@ class IpnOrderItems
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -247,7 +247,7 @@ class IpnOrderItems
     /**
      * Get orderId
      *
-     * @return integer 
+     * @return integer
      */
     public function getOrderId()
     {
@@ -267,7 +267,7 @@ class IpnOrderItems
     /**
      * Get itemName
      *
-     * @return string 
+     * @return string
      */
     public function getItemName()
     {
@@ -287,7 +287,7 @@ class IpnOrderItems
     /**
      * Get itemNumber
      *
-     * @return string 
+     * @return string
      */
     public function getItemNumber()
     {
@@ -307,7 +307,7 @@ class IpnOrderItems
     /**
      * Get quantity
      *
-     * @return string 
+     * @return string
      */
     public function getQuantity()
     {
@@ -427,7 +427,7 @@ class IpnOrderItems
     /**
      * Get optionName1
      *
-     * @return string 
+     * @return string
      */
     public function getOptionName1()
     {
@@ -447,7 +447,7 @@ class IpnOrderItems
     /**
      * Get optionSelection1
      *
-     * @return string 
+     * @return string
      */
     public function getOptionSelection1()
     {
@@ -467,7 +467,7 @@ class IpnOrderItems
     /**
      * Get optionName2
      *
-     * @return string 
+     * @return string
      */
     public function getOptionName2()
     {
@@ -487,7 +487,7 @@ class IpnOrderItems
     /**
      * Get optionSelection2
      *
-     * @return string 
+     * @return string
      */
     public function getOptionSelection2()
     {
@@ -507,7 +507,7 @@ class IpnOrderItems
     /**
      * Get optionName3
      *
-     * @return string 
+     * @return string
      */
     public function getOptionName3()
     {
@@ -527,7 +527,7 @@ class IpnOrderItems
     /**
      * Get optionSelection3
      *
-     * @return string 
+     * @return string
      */
     public function getOptionSelection3()
     {
@@ -547,7 +547,7 @@ class IpnOrderItems
     /**
      * Get optionName4
      *
-     * @return string 
+     * @return string
      */
     public function getOptionName4()
     {
@@ -567,7 +567,7 @@ class IpnOrderItems
     /**
      * Get optionSelection4
      *
-     * @return string 
+     * @return string
      */
     public function getOptionSelection4()
     {
@@ -587,7 +587,7 @@ class IpnOrderItems
     /**
      * Get optionName5
      *
-     * @return string 
+     * @return string
      */
     public function getOptionName5()
     {
@@ -607,7 +607,7 @@ class IpnOrderItems
     /**
      * Get optionSelection5
      *
-     * @return string 
+     * @return string
      */
     public function getOptionSelection5()
     {
@@ -627,7 +627,7 @@ class IpnOrderItems
     /**
      * Get optionName6
      *
-     * @return string 
+     * @return string
      */
     public function getOptionName6()
     {
@@ -647,7 +647,7 @@ class IpnOrderItems
     /**
      * Get optionSelection6
      *
-     * @return string 
+     * @return string
      */
     public function getOptionSelection6()
     {
@@ -667,7 +667,7 @@ class IpnOrderItems
     /**
      * Get optionName7
      *
-     * @return string 
+     * @return string
      */
     public function getOptionName7()
     {
@@ -687,7 +687,7 @@ class IpnOrderItems
     /**
      * Get optionSelection7
      *
-     * @return string 
+     * @return string
      */
     public function getOptionSelection7()
     {
