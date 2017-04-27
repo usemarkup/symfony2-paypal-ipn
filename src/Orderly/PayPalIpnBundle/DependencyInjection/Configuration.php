@@ -22,7 +22,7 @@ use Symfony\Component\Config\Definition\ConfigurationInterface;
  */
 
 /**
- *  Setting config validators 
+ *  Setting config validators
  */
 class Configuration implements ConfigurationInterface
 {
@@ -84,7 +84,7 @@ class Configuration implements ConfigurationInterface
     {
         $rootNode
             ->validate()
-                ->ifTrue(function($v) {
+                ->ifTrue(function ($v) {
                     return !isset($v['drivers']) || (count($v['drivers']) == 0);
                 })
                 ->thenInvalid("Please define a driver")
@@ -92,7 +92,7 @@ class Configuration implements ConfigurationInterface
             ->children()
                 ->arrayNode('drivers')
                     ->validate()
-                        ->ifTrue(function($v) {
+                        ->ifTrue(function ($v) {
                             return count($v) > 1;
                         })
                         ->thenInvalid('Please define only one driver.')

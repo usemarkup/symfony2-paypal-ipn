@@ -18,7 +18,7 @@ namespace Orderly\PayPalIpnBundle\Types;
  */
 
 /**
- *  Declare new datatype 
+ *  Declare new datatype
  */
 class EnumOrderStatus extends EnumType
 {

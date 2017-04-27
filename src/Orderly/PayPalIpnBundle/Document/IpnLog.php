@@ -1,8 +1,8 @@
 <?php
 namespace Orderly\PayPalIpnBundle\Document;
 
-use Symfony\Bridge\Doctrine\Validator\Constraints as DoctrineAssert,
-    Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints as DoctrineAssert;
+use Symfony\Component\Validator\Constraints as Assert;
 
 use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
 
@@ -297,9 +297,9 @@ class IpnLog
      */
     public function setCreatedAtValue(\DateTime $createdAt = null)
     {
-        if($createdAt==null && $this->createdAt == null){
+        if ($createdAt==null && $this->createdAt == null) {
             $this->createdAt = new \DateTime();
-        }else if($createdAt instanceof \DateTime){
+        } elseif ($createdAt instanceof \DateTime) {
             $this->createdAt = $createdAt;
         }
     }
@@ -332,11 +332,11 @@ class IpnLog
      */
     public function setUpdatedAtValue(\DateTime $updatedAt = null)
     {
-        if($updatedAt==null && $this->updatedAt == null){
+        if ($updatedAt==null && $this->updatedAt == null) {
             $this->updatedAt = new \DateTime();
-        }else if($updatedAt instanceof \DateTime){
+        } elseif ($updatedAt instanceof \DateTime) {
             $this->updatedAt = $updatedAt;
-        }else{
+        } else {
             $this->updatedAt = new \DateTime();
         }
     }
