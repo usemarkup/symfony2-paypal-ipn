@@ -140,7 +140,7 @@ class Ipn
         $this->transactionType = null;
 
         $usingCache = FALSE;
-        $request = $this->_sc->get('request');
+        $request = $this->_sc->get('request_stack')->getCurrentRequest();
 
         //get post parameters
         $parameters = $request->request->all();
