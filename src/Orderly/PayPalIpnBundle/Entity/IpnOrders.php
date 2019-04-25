@@ -698,7 +698,7 @@ class IpnOrders
     /**
      * @var string $attentionRequiredMessage
      *
-     * @ORM\Column(name="attention_required_message", type="string", length=255, nullable=false)
+     * @ORM\Column(name="attention_required_message", type="string", length=255, nullable=true)
      */
     private $attentionRequiredMessage;
 
