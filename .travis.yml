@@ -5,7 +5,6 @@ matrix:
     - php: 7.1
       env: deps=low
     - php: 7.1
-    - php: nightly
 
 sudo: false
 
