@@ -209,9 +209,9 @@ class Ipn
 
         // Now we need to ask PayPal to tell us if it sent this notification
         $ipnResponse = $this->_postData($this->ipnURL, array_merge(
-                                                                    array('cmd' => '_notify-validate'),
-                                                                    $ipnDataRaw
-                                                            ));
+            array('cmd' => '_notify-validate'),
+            $ipnDataRaw
+        ));
         if ($ipnResponse === false) { // Bail out if we have an error.
             return false;
         }
@@ -319,7 +319,7 @@ class Ipn
                 //this code iterate over ipnData fields, check if order have related field and set it
                 $parts = explode('_', $key);
                 foreach ($parts as $i => $part) {
-                    $parts[$i] = ucfirst ($part);
+                    $parts[$i] = ucfirst($part);
                 }
                 $method = join('', $parts);
                 $method = 'set'.$method;
