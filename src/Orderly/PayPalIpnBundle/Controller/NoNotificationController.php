@@ -31,10 +31,6 @@ class NoNotificationController extends Controller
 
     public $paypal_ipn;
 
-    /**
-     * @Route("/ipn-no-notification")
-     * @Template()
-     */
     public function indexAction()
     {
         //getting ipn service registered in container

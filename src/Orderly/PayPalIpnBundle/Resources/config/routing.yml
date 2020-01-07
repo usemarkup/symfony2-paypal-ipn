@@ -1,0 +1,3 @@
+IpnNoNotification:
+   path: /ipn-no-notification
+   defaults: { _controller: OrderlyPayPalIpnBundle:NoNotification:index }
