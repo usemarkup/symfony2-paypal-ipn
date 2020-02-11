@@ -1,0 +1,4 @@
+parameters:
+    excludes_analyse:
+        - %currentWorkingDirectory%/src/Orderly/PayPalIpnBundle/DependencyInjection/Configuration.php
+        - %currentWorkingDirectory%/vendor/*
