@@ -786,7 +786,7 @@ class IpnOrders
      *
      * Returns $this to facilitate method chaining.
      *
-     * @param $status
+     * @param int $status
      * @return $this
      */
     public function setStatus($status)
