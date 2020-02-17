@@ -28,8 +28,10 @@ class Configuration implements ConfigurationInterface
 {
     public function getConfigTreeBuilder()
     {
-        $tb = new TreeBuilder();
-        $rootNode = $tb->root('orderly_pay_pal_ipn');
+        $tb = new TreeBuilder('orderly_pay_pal_ipn');
+        $rootNode = (method_exists(TreeBuilder::class, 'getRootNode'))
+            ? $tb->getRootNode()
+            : $tb->root('orderly_pay_pal_ipn');
 
         $this->addDriverSection($rootNode);
 
